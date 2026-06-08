@@ -1,0 +1,167 @@
+/* Reset some default browser styles */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ededed;
+    color: #333;
+}
+
+/* General header styling */
+header {
+    background-color: #0354a5; 
+    color: white;
+    padding: 0;
+    h5{
+        margin-right: 1em;
+        margin-top: .5em;
+    }
+}
+
+/* MTC logo styling */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #ffcc00;
+}
+
+/* Further nav styling */
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #0354a5;
+}
+
+/* Padding for hamburger menu button */
+.navbar.navbar-expand-md.navbar-dark.bg-primary{
+    padding: 0;
+}
+
+/* Navbar ul styling */
+#navbarNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar li styling*/
+#navbarNav li {
+    height: 60px;
+}
+
+/* Navigation item styling*/
+#navbarNav .nav-link  {
+    display: flex;              /* flex so text centers */
+    align-items: center;       /* vertical centering */
+    justify-content: center;    /* horizontal centering */
+    padding: 0 1.5rem;          /* horizontal spacing only */
+    height: 100%;               /* stretch to header height */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover styling for nav links */
+#navbarNav .nav-link:hover {
+    background-color: #2a69a8;
+}
+
+/* Our mission section styling */
+#our-mission{
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #dbedff;
+    h4{text-decoration: underline;}
+}
+
+/* General main styling */
+main {
+    padding: 2rem;
+    margin: 0rem 6rem;
+    background-color: #ffffff;
+    min-height: 60vh;
+}
+
+/* General h1 styling */
+h1{
+    text-align: center;
+}
+
+/* General footer styling */
+footer {
+    background-color:#0354a5;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Project card styling for index */
+.project-card{
+     border-bottom: 10px;
+     margin-bottom: 10px;
+    h5{
+        font-weight: bold;
+        padding: 6px;
+    }
+    p{
+       font-weight: bold;
+       padding: 6px;
+    }
+}
+
+/* General styling for projects page */
+#prj-page{
+    h1{
+        background-color: #2a69a8;
+        color: white;
+        padding: 10px;
+    }
+    /* Project info tab styling */
+    #prj-info{
+        background-color: #ffcc00;
+        padding: 20px 10px;
+    }
+    .lead{
+        background-color: #bcd5ee;
+        padding: 10px 20px;
+    }
+
+    /* Project tab styling */
+    #project-tabs{
+        background-color: #bcd5ee;
+        .nav-link{
+            color: white;
+            background-color: #0354a5;
+        }
+        /* Active tab styling */
+        .active{
+            background-color: #036eda;
+        }
+    }
+}
+
+/* Adjustments made for diffrent sized screens */
+@media (max-width: 940px) {
+    button{margin-right: 10px;}
+    main{margin:auto}
+}
+@media (max-width: 720px){
+    #our-mission{margin: auto;}
+    main{margin:auto}
+}
+@media (max-width: 400px){
+    #hero-btn-top{font-size: 90%;}
+    #hero-btn-bottom{font-size: 90%;}
+    #project-tabs{font-size: 95%;}
+}
