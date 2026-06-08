@@ -15,3 +15,9 @@ PHP Craps Game - https://github.com/raymondakellyiii-sketch/raymondakellyiii-ske
 Cassette Collection - https://github.com/raymondakellyiii-sketch/raymondakellyiii-sketch/tree/main/Raymond_Kelly_Term_Project
 
 Brew Haven (Currently working on) - https://github.com/raymondakellyiii-sketch/raymondakellyiii-sketch/tree/main/Brew%20Haven
+
+Contact Links: 
+
+Email: raymondakellyiii@gmail.com, raymondkelly26@gmail.com
+
+Linked In: www.linkedin.com/in/raymond-kelly-25a175372
