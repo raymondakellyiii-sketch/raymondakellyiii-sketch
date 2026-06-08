@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<style> 
+	.accordion { cursor: pointer; padding: 10px; width: 100%; text-align: center; border: 1px solid #ccc; outline: none; transition: 0.4s; background-color: rgb(154, 197, 211); } 
+	.active, .accordion:hover { background-color: #A26100; } 
+	.panel { padding: 0 10px; display: none; background-color:  #1e5067; overflow: hidden; color:#cbd8df; font-weight: bold; } 
+	.carrot {float: right; color: #1e5067; font-size: 50%; margin-top: .5em;}
+</style> 
+<script> 
+	'strict on';
+	document.addEventListener('DOMContentLoaded', function() { 
+		var acc = document.getElementsByClassName('accordion');
+		for (var i = 0; i < acc.length; i++) {
+			acc[i].addEventListener('click', function() { 
+			this.classList.toggle('active'); 
+			var carrot = this.querySelector('.carrot');
+			if (carrot.innerText ==='▼'){
+				carrot.innerText = '▲'
+			} else{
+				carrot.innerText = '▼'
+			}
+			var panel = this.nextElementSibling; 
+			if (panel.style.display === 'block') { 
+				panel.style.display = 'none'; 
+			} else { 
+				panel.style.display = 'block'; 
+			} 
+			}); 
+		} 
+	}); 
+ </script>
+<html lang="en">
+	<head>
+		<title>"Cassette Collection :: Cassette Care"</title>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href= "termproject.css">
+	</head>
+
+	<body>
+		<header class="content"><a href="index.html">Cassette Collection</a> </header>
+		<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="favorites.html">My Favorites</a></li>
+					<li><a href="care.html">Cassette Care</a></li>
+					<li><a href="hunt.html">Cassette Hunt</a></li>
+					<li><a href="organizing.html">Organizing</a></li>
+				</ul>
+		</nav>
+
+		<div id="care">
+		
+			<main>
+
+				<h2>Cassette Care</h2>
+				
+				<blockquote>Knowing how to care for your cassettes will ensure they last longer!</blockquote>
+				
+				<hr>
+				
+				<section>
+				
+					<button class="accordion"><h2>Storage<span class = 'carrot'>▼</span></h2></button>
+					<div class="panel">
+					<ul>
+					
+						<li><h5>Avoid Heat and Sunlight:</h5> Store your cassettes in a cool, dry place away from direct sunlight and heat sources, which can warp the tape and degrade the sound quality.</li>
+						
+						<li><h5>Use a Case:</h5> Keep cassettes in their cases to protect them from dust, dirt, and physical damage.</li>
+
+						<li><h5>Vertical Storage:</h5> Store cassettes vertically, like books on a shelf, to prevent warping.</li>
+						
+					</ul>
+					</div>
+					
+				</section>
+				
+				<section>
+				
+					<button class="accordion"><h2>Handling<span class = 'carrot'>▼</span></h2></button>
+					<div class="panel">
+					<ul>
+						<li><h5>Clean Hands:</h5> Handle cassettes with clean, dry hands to avoid transferring oils and dirt to the tape.</li>
+
+						<li><h5>Avoid Touching the Tape:</h5> Never touch the magnetic tape inside the cassette to prevent smudges and scratches.</li>
+						
+					</ul>
+					</div>
+				<section>
+				
+				</section>
+				
+				<button class="accordion"><h2>Cleaning<span class = 'carrot'>▼</span></h2></button>
+				<div class="panel">
+					<ul>
+						<li><h5>Regular Dusting:</h5> Dust the exterior of your cassettes regularly with a soft, dry cloth.</li>
+
+						<li><h5>Cleaning the Tape Deck:</h5> Use a cassette deck cleaning kit periodically to ensure the tape heads are free of dust and grime, which can affect playback quality.</li>
+						
+					</ul>
+					</div>
+				<section>
+				
+				</section>
+				
+				<button class="accordion"><h2>Playback<span class = 'carrot'>▼</span></h2></button>
+				<div class="panel">
+					<ul>
+						<li><h5>Rewind and Fast Forward:</h5> Periodically rewind and fast forward your tapes to prevent them from becoming too tight or loose. This helps maintain the tension and condition of the tape.</li>
+
+						<li><h5>Avoid Pausing for Long Periods:</h5> If you need to pause playback, don't leave the tape paused for extended periods as this can create pressure points on the tape.</li>
+						
+					</ul>
+				</div>
+				<section>
+				
+				</section>
+				
+				<button class="accordion"><h2>Avoiding Magnetic Fields<span class = 'carrot'>▼</span></h2></button>
+				<div class="panel">
+					<ul>
+					
+						<li><h5>Keep Away from Magnets:</h5> Store cassettes away from magnetic sources (like speakers or other electronic devices) to prevent erasing or distorting the magnetic tape.</li>
+						
+					</ul>
+				</div>
+				</section>
+				
+				<section>
+				
+					<button class="accordion"><h2>Transporting<span class = 'carrot'>▼</span></h2></button>
+					<div class="panel">
+					<ul>
+					
+						<li><h5>Protect from Shock:</h5> When transporting cassettes, use padded cases to protect them from shocks and vibrations.</li>
+
+						<li><h5>Avoid Extreme Temperatures:</h5> Do not leave cassettes in hot or cold environments, like inside a car on a hot day or in freezing conditions.</li>
+						
+					</ul>
+					</div>
+				</section>
+
+				<br></br>
+				
+				<footer>
+
+					Copyright &copy; 2024 Cassette Collection
+					<br>
+					<a href="mailto:raymondkelly@student.midlandstech.edu">raymondkelly@student.midlandstech.edu</a>
+
+				</footer>
+			</main>
+		</div>
+	</body>
+</html>
