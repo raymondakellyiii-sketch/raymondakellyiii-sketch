@@ -7,6 +7,9 @@ Some of my skills include, HTML, CSS, JavaScript, Java, PHP, SQL, and MPV
 Featured Projects:
 
 Joomla! Projec - http://student.mtc-ist.com/~raymondkelly/project/joomla/
+
 MTC Food Drive -
-PHP Craps Game - 
+
+PHP Craps Game - https://github.com/raymondakellyiii-sketch/raymondakellyiii-sketch/tree/main/Craps_Game/Craps_Game
+
 Cassette Collection - 
