@@ -6,7 +6,7 @@ Some of my skills include, HTML, CSS, JavaScript, Java, PHP, SQL, and MPV
 
 Featured Projects:
 
-Joomla! Projec - http://student.mtc-ist.com/~raymondkelly/project/joomla/
+Joomla! Project - http://student.mtc-ist.com/~raymondkelly/project/joomla/
 
 MTC Food Drive -
 
