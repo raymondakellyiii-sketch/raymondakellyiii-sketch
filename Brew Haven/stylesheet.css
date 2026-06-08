@@ -1,0 +1,235 @@
+nav{
+    background-color: #5B451A;
+    #navbarNav{font-size: 20px; margin-right:4em;}
+    .navbar-brand{margin-left:2em;}
+    .nav-item{padding-right:10px;}
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-color: #D4D4D4;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    margin-top: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-toggler{
+border: none;
+}
+/* IMAGE + GRADIENT OVERLAY */
+.gradient-box {
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.gradient-box img {
+    display: block;
+}
+
+.gradient-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    pointer-events: none;
+}
+
+#index-welcome{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    line-height: 100px; 
+}
+
+.content {
+    display: block;
+    height: 100%;
+    margin-left: 8em;
+    margin-right: 8em;
+    background-color: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-bottom: 0;
+    text-align: center;
+}
+/* Heading inside index content */
+.content h3 {
+    text-align: center;
+    color: #5B451A;
+    font-weight: bold;
+}
+/* Each block */
+.index-block {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 0;
+}
+/* Paragraph inside block */
+.index-paragraph {
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    flex: 1;
+}
+/* Business hours text */
+.business-hours {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    line-height: 50px;
+    background-color:#5B451A;
+    color: #ffffff;
+    border: 2px solid #5B451A;
+    border-radius: 10px;
+}
+
+#site-footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.side-by-side img {
+    width: 300px;
+    border-radius: 10px;
+
+}
+
+.side-by-side .index-paragraph {
+    width: 60%;
+    text-align: center;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-header img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.accordion{
+    width: 100%;
+    background-color: #8d6c29;
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+.panel{
+    display: none;
+    text-align: left;
+    padding-left: 4em;
+}
+
+
+@media (max-width: 1024px) {
+    .side-by-side {
+        gap: 1.5em;
+    }
+
+    .side-by-side img {
+        width: 225px;
+    }
+
+    .side-by-side .index-paragraph {
+        width: 55%;
+        font-size: 18px;
+    }
+
+    .index-block {
+        padding: 2.5em 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-by-side {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .side-by-side img,
+    .side-by-side .index-paragraph {
+        width: 100%;
+    }
+
+    .side-by-side .index-paragraph {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .index-block {
+        padding: 2em 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content{
+        margin:0;
+    }
+    h3 {
+        font-size: 22px;
+    }
+
+    .index-paragraph {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .side-by-side img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .index-block {
+        padding: 1.5em 0.5em;
+    }
+
+    .business-hours {
+        font-size: 22px;
+        line-height: 40px;
+        padding: 8px;
+    }
+    .menu-header img{
+        padding: 0;
+    }
+}
