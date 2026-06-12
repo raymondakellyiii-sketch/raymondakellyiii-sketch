@@ -104,7 +104,7 @@ border: none;
     border: 2px solid #5B451A;
     border-radius: 10px;
 }
-
+/* Site footer formatting */
 #site-footer {
     background-color: #111;
     color: #fff;
@@ -112,25 +112,25 @@ border: none;
     padding: 20px 0;
     font-size: 0.9rem;
 }
-
+/* Side-by-side formatting */
 .side-by-side {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2em;
 }
-
+/* Side-by-side formatting for index images */
 .side-by-side img {
     width: 300px;
     border-radius: 10px;
 
 }
-
+/* Side-by-side formatting for index paragraphs */
 .side-by-side .index-paragraph {
     width: 60%;
     text-align: center;
 }
-
+/* Formatting of the menu page header */
 .menu-header {
     display: flex;
     align-items: center;
@@ -139,26 +139,99 @@ border: none;
     width: 100%;
     box-sizing: border-box;
 }
-
+/* Menu image formatting */
 .menu-header img {
-    max-width: 100%;
+    max-width: 50%;
     width: 100%;
     height: auto;
 }
-
+/* Accordion menu button formatting */
 .accordion{
     width: 100%;
     background-color: #8d6c29;
     color: white;
     border: 1px solid white;
 }
-
-
-
+/* Accordion panel card */
 .panel{
     display: none;
     text-align: left;
     padding-left: 4em;
+}
+/* Calander block formatting */
+#calendar{
+    max-width: 800px;
+    margin: 2em auto;
+    background: #ffffff;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid #5B451A;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* Calendar header formatting */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #5B451A;
+}
+/* Month veiw change arrow formatting */
+.calendar-arrow {
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 0 10px;
+    user-select: none;
+    color: #5B451A;
+}
+/* Month veiw swap arrows hover */
+.calendar-arrow:hover {
+    color: #8B6A2B;
+}
+/* Calendar grid formatting */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+/* Day name formatting */
+.day-name {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    background: #5B451A;
+    color: white;
+    border-radius: 5px;
+}
+/* Day box formatting */
+.day {
+    padding: 20px 0;
+    text-align: center;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+/* Other days */
+.day.blank {
+    background: transparent;
+}
+/* Highlight current day */
+.day.today {
+    background: #FFD27F;
+    border: 2px solid #5B451A;
+    font-weight: bold;
+}
+/* Button on the events page that redirects to the contact us page */
+#contact-us {
+    color:white;
+    font-size: 1.5em;
+    background-color: #5B451A;
+    border: 2px solid #5B451A;
+    border-radius: 4px;
+    margin-top: 1em;
 }
 
 
@@ -200,6 +273,10 @@ border: none;
     .index-block {
         padding: 2em 1em;
     }
+
+    .menu-header img{
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -231,5 +308,6 @@ border: none;
     }
     .menu-header img{
         padding: 0;
+        max-width: 100%;
     }
 }

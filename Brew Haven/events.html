@@ -37,13 +37,114 @@
 
     <main>
         <div class="content">
-            
+            <h3>Events</h3>
+            <h4>At Brew Haven, we’re all about bringing people together. Explore our calendar to see what’s happening and when we’ll be celebrating with you.</h4>
+            <div id="calendar"></div>
+            <hr>
+            <h3>Want to plan an event with us?</h3>
+            <h5>Please visit the contact page and submit a form and we'll get back to you as soon as possible.</h5>
+            <a href="contact-us.html">
+                <button id="contact-us">Contact Us</button>
+            </a>
         </div>
     </main>
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const calendarEl = document.getElementById("calendar");
+
+    let current = new Date();
+
+    function renderCalendar() {
+        calendarEl.innerHTML = "";
+
+        const year = current.getFullYear();
+        const month = current.getMonth();
+        const today = new Date();
+
+        const monthName = current.toLocaleString("default", { month: "long" });
+
+        // Header with arrows
+        const header = document.createElement("div");
+        header.className = "calendar-header";
+
+        const leftArrow = document.createElement("span");
+        leftArrow.className = "calendar-arrow";
+        leftArrow.textContent = "◀";
+        leftArrow.onclick = () => {
+            current.setMonth(current.getMonth() - 1);
+            renderCalendar();
+        };
+
+        const rightArrow = document.createElement("span");
+        rightArrow.className = "calendar-arrow";
+        rightArrow.textContent = "▶";
+        rightArrow.onclick = () => {
+            current.setMonth(current.getMonth() + 1);
+            renderCalendar();
+        };
+
+        const title = document.createElement("div");
+        title.textContent = `${monthName} ${year}`;
+
+        header.appendChild(leftArrow);
+        header.appendChild(title);
+        header.appendChild(rightArrow);
+
+        calendarEl.appendChild(header);
+
+        // Grid
+        const grid = document.createElement("div");
+        grid.className = "calendar-grid";
+        calendarEl.appendChild(grid);
+
+        // Day names
+        const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        dayNames.forEach(d => {
+            const el = document.createElement("div");
+            el.className = "day-name";
+            el.textContent = d;
+            grid.appendChild(el);
+        });
+
+        // First day of month
+        const firstDay = new Date(year, month, 1).getDay();
+
+        // Days in month
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        // Blank cells
+        for (let i = 0; i < firstDay; i++) {
+            const blank = document.createElement("div");
+            blank.className = "day blank";
+            grid.appendChild(blank);
+        }
+
+        // Days
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayEl = document.createElement("div");
+            dayEl.className = "day";
+            dayEl.textContent = day;
+
+            // Highlight today
+            if (
+                day === today.getDate() &&
+                month === today.getMonth() &&
+                year === today.getFullYear()
+            ) {
+                dayEl.classList.add("today");
+            }
+
+            grid.appendChild(dayEl);
+        }
+    }
+
+    renderCalendar();
+});
+</script>
     <footer id="site-footer">
         <p>&copy; 2024 Brew Haven Café & Lounge</p>
         <p>123 Coffee Street, Lexington, SC</p>
